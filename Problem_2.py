@@ -48,7 +48,10 @@ https://youtu.be/ifr4DadXurc?t=1726
 
             Time      Space
 __init__(): O(N)      O(N),  N = len(wordsDict)
-shortest(): O(K1+K2), Space: O(K1+K2), K1 = len of list map[word1], K2 = len of list map[word2]
+shortest(): O(K1+K2), Space: O(K1+K2), K1 = len of list map[word1], K2 = len of list map[word2]. Note that K1 + K2 < N
+
+For shortest(), had we used the approach of "LC#243 Shortest Word Distance", then
+shortest(): O(NK), Space: O(1) (where NK > K1 + K2)
 '''
 from typing import List
 from collections import defaultdict
